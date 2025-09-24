@@ -42,7 +42,46 @@ return (
                     <img src={memories} alt="" />
                     <span>Memories </span>
                 </div>
-
+            </div>
+            <hr />
+            <div className="menu">
+                <span>Your shortcuts</span>
+                <div className="item">
+                    <img src={events} alt="" />
+                    <span>Events </span>
+                </div>
+                <div className="item">
+                    <img src={gaming} alt="" />
+                    <span>Gaming </span>
+                </div>
+                <div className="item">
+                    <img src={gallery} alt="" />
+                    <span>Gallery </span>
+                </div>
+                <div className="item">
+                    <img src={video} alt="" />
+                    <span>Videos </span>
+                </div>
+                <div className="item">
+                    <img src={message} alt="" />
+                    <span>Messages </span>
+                </div>
+            </div>
+            <hr />
+            <div className="menu">
+                <span>Others</span>
+                <div className="item">
+                    <img src={fund} alt="" />
+                    <span>Fundraiser </span>
+                </div>
+                <div className="item">
+                    <img src={tutorials} alt="" />
+                    <span>Tutorials </span>
+                </div>
+                <div className="item">
+                    <img src={courses} alt="" />
+                    <span>Courses </span>
+                </div>
             </div>
         </div>
     </div>
