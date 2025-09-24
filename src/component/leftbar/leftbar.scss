@@ -1,0 +1,34 @@
+.leftbar{
+
+    .container{
+        padding: 20px;
+        .menu{
+
+            .user{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                
+                span{
+                    
+                }
+            }
+
+            .item{
+
+                img{
+                    width: 37px;
+                }
+                
+                span{
+
+                }
+            }
+        }
+    }
+}
