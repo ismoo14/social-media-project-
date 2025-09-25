@@ -8,14 +8,19 @@ import Rightbar from "./component/rightbar/RightBar"
 import Home from "./pages/home/Home"
 import Profile from "./pages/profile/Profile"
 import "./style.scss"
+import { useContext } from 'react';
+import { DarkModeContext } from './context/DarkModeContext';
+import { AuthContext } from './context/authContext';
 
 function App() {
 
-  const currentUser = true;
+  const {currentUser} = useContext(AuthContext);
+
+  const {darkMode} = useContext(DarkModeContext)
 
   const Layout = ()=>{
     return(
-      <div className='theme-dark'> 
+      <div className={`theme-${darkMode ? "dark" : "light"}`}> 
         <Navbar />
         <div style={{display: "flex"}}>  
         <Leftbar />
@@ -25,7 +30,7 @@ function App() {
         <Rightbar />
         </div>
       </div>
-    )
+    );
   };
 
   const ProtectedRoute = ({children}) => {
@@ -46,11 +51,11 @@ function App() {
       children:[
         {
           path:"/",
-          element:<Home />
+          element:<Home />,
         },
         {
           path:"/profile/:id",
-          element:<Profile />
+          element:<Profile />,
         }
       ]
     },
