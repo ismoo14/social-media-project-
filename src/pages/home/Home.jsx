@@ -1,36 +1,11 @@
-
+import Postss  from "../../component/posts/Postss"
+import Stories from "../../component/stories/Stories";
 
 const Home = () => {
   return (
     <div className="home">
-      <h1>home</h1>
-      
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-
-
-      
+      <Stories />
+      <Postss />
     </div>
   )
 }

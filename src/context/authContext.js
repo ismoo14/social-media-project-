@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import logo from "../pages/Img/pexels-markusspiske-247160.jpg"
+import logo from '../component/img/pexels-markusspiske-247160.jpg';
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
@@ -7,8 +7,14 @@ export const AuthContextProvider = ({ children }) => {
         JSON.parse(localStorage.getItem("user")) || null
     );
 
+    const PROFILE_PIC_URL = "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg"
+
     const login = () => {
-        setCurrentUser ({id:1, name:"ismoo", });
+        setCurrentUser ({
+            id:1, 
+            name: "ismoo", 
+            profilePic: PROFILE_PIC_URL, 
+        });
     };
 
     useEffect(() => {

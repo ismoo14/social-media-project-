@@ -15,8 +15,8 @@ import { AuthContext } from "../../context/authContext";
 
 const NavBar = () => {
 
-    const {toggle, darkMode} = useContext(DarkModeContext)
-    const {currentUser} = useContext(AuthContext)
+    const {toggle, darkMode} = useContext(DarkModeContext);
+    const {currentUser} = useContext(AuthContext);
 
 return (
     <div className="navbar">
