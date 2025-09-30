@@ -1,5 +1,5 @@
 import "./leftbar.scss"
-import logo from '../img/pexels-markusspiske-247160.jpg';
+import logo from '../img/profile-img.jpg';
 import friends from "../../assets/friendship.png"
 import group from "../../assets/group.png"
 import market from "../../assets/retailer.png"

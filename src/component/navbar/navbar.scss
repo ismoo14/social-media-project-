@@ -38,6 +38,15 @@
                 width: 500px;
                 background-color: transparent;
                 color: themed("textcolor");
+
+
+                @include mobile{
+                    display: none;
+                }
+
+        @include tablet{
+        width: 200px;
+    }
             }
         }
     }
@@ -46,11 +55,20 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        @include mobile{
+                    display: none;
+                }
+
         .user{
             display: flex;
             align-items: center;
             gap: 10px;
             font-weight: 500;
+
+            @include tablet{
+        display: none;
+    }
         }
 
         img{

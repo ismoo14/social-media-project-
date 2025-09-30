@@ -10,22 +10,22 @@ const Stories = () => {
     const stories = [
         {
             id:1,
-            name: "ismail Abdi",
+            name: "Hiku",
             img: "https://images.pexels.com/photos/19872828/pexels-photo-19872828.jpeg"
         },
         {
             id:3,
-            name: "ismail Abdi",
+            name: "Merjan",
             img: "https://images.pexels.com/photos/33036067/pexels-photo-33036067.jpeg"
         },
         {
             id:3,
-            name: "ismail Abdi",
+            name: "etsub",
             img: "https://images.pexels.com/photos/5966509/pexels-photo-5966509.jpeg"
         },
         {
             id:4,
-            name: "ismail Abdi",
+            name: "Imran",
             img: "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg"
         },
         

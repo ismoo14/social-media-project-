@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "./navbar.scss"
-import logo from '../img/pexels-markusspiske-247160.jpg';
+import logo from '../img/profile-img.jpg';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
