@@ -1,21 +1,41 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 import "./login.scss"
+import { useState } from "react";
 
 const Login = () => {
-    const {login} = useContext(AuthContext);
+    const [inputs, setInputs] = useState({
+            username:"",
+            password:"",
+        });
+    
+        const [err, setErr] = useState(null);
 
-    const handleLogin = () => {
-        login();
-    }
+        const navigate = useNavigate()
+    
+        const handleChange =  (e) => {
+            setInputs((prev) => ({...prev, [e.target.name]: e.target.value }));
+        };
+
+    const { login } = useContext(AuthContext);
+
+    const handleLogin = async (e) => {
+        e.preventDefault()
+        try{
+            await login(inputs);
+            navigate("/")
+        }catch (err) {
+            setErr(err.response.data);
+        }
+    };
 return (
     <div className="login">
         <div className="card">
             <div className="left">
-                <h1>Hello World.</h1>
+                <h1>Hi There.</h1>
                 <p>
-                    lnsvnf jvbfvbfj kvbjkbvj vknvkjvkj vbsjkvbsjkvsbvjs bvjsbvkj sbvsjb vsjkvb ssdjbsuf heufhwe fioqpdj efnvsoeif wh ufssjieu sfidjefu sfifhewufjfe ihfuejfklekfien.
+                    Welcome.
                 </p>
                 <span>Don't you have an account?</span>
                 <Link to="/register">
@@ -25,10 +45,11 @@ return (
             <div className="right">
                 <h1>Login</h1>
                 <form>
-                    <input type="text" placeholder="Username"
+                    <input type="text" placeholder="Username" name="username" onChange={handleChange}
+                    /> 
+                    <input type="Password" placeholder="Password" name="password" onChange={handleChange}
                     />
-                    <input type="Password" placeholder="Password"
-                    />
+                    {err && err}
                     <button onClick={handleLogin}>Login</button>
                 </form>
             </div>

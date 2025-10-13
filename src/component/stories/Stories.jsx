@@ -14,7 +14,7 @@ const Stories = () => {
             img: "https://images.pexels.com/photos/19872828/pexels-photo-19872828.jpeg"
         },
         {
-            id:3,
+            id:2,
             name: "Merjan",
             img: "https://images.pexels.com/photos/33036067/pexels-photo-33036067.jpeg"
         },

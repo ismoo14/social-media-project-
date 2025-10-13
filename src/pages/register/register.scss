@@ -1,24 +1,42 @@
+@import "../../style.scss";
 *{
     margin: 0;
     padding: 0;
 }
 
 .register{
+    background-color: rgb(193, 190,255);
 height: 100vh;
-background-color: rgb(152, 149, 207);
+overflow: hidden;
 display: flex;
 align-items: center;
 justify-content: center;
+
+@include mobile{
+        height: auto; 
+        background-color: white;
+        }
     .card{
-        width: 50%;
+        width: 55%;
         display: flex;
         flex-direction: row-reverse;
         background-color: white;
         border-radius: 10px;
-        min-height: 460px;
+        min-height: 500px;
         overflow: hidden;
-
-
+        @include mobile{
+        flex-direction: column !important;
+        width: 90% !important; 
+        max-height: none !important; 
+        min-height: auto !important; 
+        margin: 20px 0;
+        }
+        @include tablet{
+        width: 80% !important; 
+        max-width: 800px !important; 
+        flex-direction: row !important; 
+        margin-top: 20px !important; 
+        }
     .left{
         flex: 1;
         background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)), url("../Img/pexels-ruvim-1807011-3560044.jpg") center;
@@ -26,24 +44,35 @@ justify-content: center;
         padding: 50px;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 53px;
         color: white;
-
-
+        @include mobile{
+            flex: none; 
+        width: 100%; 
+        padding: 20px;
+        min-height: 250px;
+        }
+        @include tablet{
+            padding: 30px !important; 
+        gap: 20px !important;
+        }
             h1{
                 font-size: 90px;
                 line-height: 85px;
+                @include tablet{
+                    font-size: 60px !important; 
+        line-height: 55px !important;
+                }
             }
-
             p{
-                color: black;
-                font-size: 16px;
+                color: white;
+                font-size: 19px;
+                line-height: 30px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             }
-
             span{
-                font-size: 14px;
+                font-size: 15px;
             }
-
             button{
                 width: 50%;
                 padding: 10px;
@@ -52,10 +81,9 @@ justify-content: center;
                 color: rebeccapurple;
                 font-weight: bold;
                 cursor: pointer;
+                margin-top: -12px;
             }
         }
-
-
     .right{
         flex: 1;
         padding: 50px;
@@ -63,23 +91,40 @@ justify-content: center;
         flex-direction: column;
         gap: 50px;
         justify-content: center;
-
+        @include mobile{
+            flex: none; 
+        width: 100%; 
+        padding: 20px;
+        background-color: white; 
+        border-radius: 0 0 10px 10px;
+        }
+        @include tablet{
+            padding: 30px !important; 
+            width: 100%;
+        gap: 20px !important;
+        }
             h1{
                 color:#555
             }
-
             form{
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
-
-
+        @include tablet{
+            width: 100%;
+        }
                 input{
                     border: none;
                     border-bottom: 1px solid lightgray;
                     padding: 20px 10px;
+                    @include mobile{
+                    border: 1px solid rgb(105, 103, 103);
                 }
-
+                    @include tablet{
+            padding:  15px 10px !important; 
+            width: 100%;
+        }
+                }
                 button{
                 width: 50%;
                 padding: 10px;
@@ -88,6 +133,12 @@ justify-content: center;
                 color: white;
                 font-weight: bold;
                 cursor: pointer;
+                @include mobile{
+                    width: 100% !important;
+                }
+                @include tablet{
+                    width: 50% !important;
+                }
                 }
             }
         }

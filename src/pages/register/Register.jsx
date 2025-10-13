@@ -11,7 +11,7 @@ const Register = () => {
         name:"",
     });
 
-    const [err, setErr] = useState(false);
+    const [err, setErr] = useState(null);
 
     const handleChange =  (e) => {
         setInputs((prev) => ({...prev, [e.target.name]: e.target.value }));
@@ -23,7 +23,7 @@ const Register = () => {
         try {
             await axios.post("http://localhost:8800/api/auth/register", inputs);
         } catch(err){
-        setErr(true);
+        setErr(err.response.data);
         }
 };
     
@@ -32,9 +32,7 @@ return (
         <div className="card">
             <div className="left">
                 <h1>DM Me.</h1>
-                <p>
-                    lnsvnf jvbfvbfj kvbjkbvj vknvkjvkj vbsjkvbsjkvsbvjs bvjsbvkj sbvsjb vsjkvb ssdjbsuf heufhwe fioqpdj efnvsoeif wh ufssjieu sfidjefu sfifhewufjfe ihfuejfklekfien.
-                </p>
+                <p>This is DM Me Social Media web app that helps you connect with your loved ones.</p>
                 <span>Do you have an account?</span>
                 <Link to="/Login">
                 <button>Login</button>
@@ -51,7 +49,7 @@ return (
                     />
                     <input type="text" placeholder="Name" name="name" onChange={handleChange}
                     />
-                    {err && ""}
+                    {err && err}
                     <button onClick={handleClick}>Register</button>
                 </form>
             </div>

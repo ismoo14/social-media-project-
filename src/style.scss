@@ -42,13 +42,13 @@ dark: (
 
 
 @mixin mobile{
-    @media (max-width:480px){
+    @media (max-width:556px){
         @content;
     }
 }
 
 @mixin tablet{
-    @media (max-width: 960px){
+    @media (min-width: 557px) and (max-width: 1004px){
         @content;
     }
 }

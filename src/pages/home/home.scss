@@ -4,6 +4,7 @@
     @include themify($themes){
 
     background-color: themed("bgsoft");
+    min-height: 100%;
     padding: 20px 70px;
 
     @include mobile{

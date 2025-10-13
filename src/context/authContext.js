@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import logo from '../component/img/pexels-markusspiske-247160.jpg';
+import axios from "axios";
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
@@ -7,14 +8,23 @@ export const AuthContextProvider = ({ children }) => {
         JSON.parse(localStorage.getItem("user")) || null
     );
 
-    const PROFILE_PIC_URL = "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg"
-
-    const login = () => {
-        setCurrentUser ({
-            id:1, 
-            name: "ismoo", 
-            profilePic: PROFILE_PIC_URL, 
+    const login = async (inputs) => {
+        const res = await axios.post("http://localhost:8800/api/auth/login", inputs, {
+            withCredentials: true,
         });
+
+        setCurrentUser(res.data)
+    };
+
+    const logout = async () => {
+        try {
+            await axios.post("http://localhost:8800/api/auth/logout");
+        } catch (err) {
+            console.error("Backend logout failed", err);
+        }
+
+        setCurrentUser(null);
+        localStorage.removeItem("user"); 
     };
 
     useEffect(() => {
@@ -22,7 +32,7 @@ export const AuthContextProvider = ({ children }) => {
     }, [currentUser]);
     
     return(
-        <AuthContext.Provider value={{currentUser, login}}>
+        <AuthContext.Provider value={{ currentUser, login, logout }}>
             {children}
         </AuthContext.Provider>
     );
