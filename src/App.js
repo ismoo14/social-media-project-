@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { createBrowserRouter, RouterProvider, Route, Outlet, Navigate } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet, Navigate } from 'react-router-dom';
 import Login from "./pages/login/Login"
 import Register from "./pages/register/Register"
 import Navbar from "./component/navbar/NavBar"

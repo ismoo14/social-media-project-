@@ -8,7 +8,7 @@ import { useState } from "react";
 const Comments = ({postId}) => {
     const [desc, setDesc] = useState("")
 
-    const { isLoading, error, data } = useQuery({
+    const { isLoading, _error, data } = useQuery({
     
         queryKey: ['comments'],
         

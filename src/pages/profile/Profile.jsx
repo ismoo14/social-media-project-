@@ -69,10 +69,10 @@ const Profile = () => {
       <div className="profilecontainer">
         <div className="uinfo">
           <div className="left">
-            <a href=""><FacebookTwoToneIcon fontSize="large" role="button" /></a>
-            <a href=""><InstagramIcon fontSize="large" role="button" /></a>
-            <a href=""><XIcon fontSize="large" role="button" /></a>
-            <a href=""><LinkedInIcon fontSize="large" role="button" /></a>
+            <a href="#"><FacebookTwoToneIcon fontSize="large" role="button" /></a>
+            <a href="#"><InstagramIcon fontSize="large" role="button" /></a>
+            <a href="#"><XIcon fontSize="large" role="button" /></a>
+            <a href="#"><LinkedInIcon fontSize="large" role="button" /></a>
           </div>
           <div className="center">
             <span>{data.name}</span>

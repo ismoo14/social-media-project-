@@ -18,7 +18,7 @@ const Post = ({post}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const {currentUser} = useContext(AuthContext)
 
-    const { isLoading, error, data } = useQuery({
+    const { isLoading, _error, data } = useQuery({
     
         queryKey: ['likes', post.id],
         
