@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import logo from '../component/img/pexels-markusspiske-247160.jpg';
 import axios from "axios";
 export const AuthContext = createContext();
 

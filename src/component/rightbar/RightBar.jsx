@@ -1,5 +1,4 @@
 import "./rightbar.scss"
-import logo from '../img/pexels-markusspiske-247160.jpg';
 
 const RightBar = () => {
 return (

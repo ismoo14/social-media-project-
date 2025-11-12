@@ -63,16 +63,16 @@ const Profile = () => {
       ) : (
       <>
         <div className="images">
-        <img src={"/upload/"+data.coverPic} className="cover"/>
-        <img src={"/upload/"+data.profilePic} className="profilePic"/>
+        <img src={"/upload/"+data.coverPic} className="cover" alt=""/>
+        <img src={"/upload/"+data.profilePic} className="profilePic" alt=""/>
       </div>
       <div className="profilecontainer">
         <div className="uinfo">
           <div className="left">
-            <a href="#"><FacebookTwoToneIcon fontSize="large" /></a>
-            <a href="#"><InstagramIcon fontSize="large" /></a>
-            <a href="#"><XIcon fontSize="large" /></a>
-            <a href="#"><LinkedInIcon fontSize="large" /></a>
+            <a href=""><FacebookTwoToneIcon fontSize="large" role="button" /></a>
+            <a href=""><InstagramIcon fontSize="large" role="button" /></a>
+            <a href=""><XIcon fontSize="large" role="button" /></a>
+            <a href=""><LinkedInIcon fontSize="large" role="button" /></a>
           </div>
           <div className="center">
             <span>{data.name}</span>
